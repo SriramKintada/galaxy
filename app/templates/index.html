@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0d0d2b, #1c1c3a);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        a, button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        a:hover, button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to Galaxy Generator</h1>
+        <p>This app uses WGAN-GP and Pix2Pix models to generate and colorize galaxies!</p>
+        <a href="/generate">Generate Galaxy</a>
+        <form action="/colorize" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <button type="submit">Colorize Galaxy</button>
+        </form>
+    </div>
+</body>
+</html>
