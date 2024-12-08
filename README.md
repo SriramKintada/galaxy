@@ -30,3 +30,7 @@ Follow these steps to run the Galaxy Generator app on your local machine:
    ```bash
    git clone https://github.com/your-username/galaxy-generator-app.git
    cd galaxy-generator-app
+
+2. Run the flask application:
+   ```bash
+   python app.py   
